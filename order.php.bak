@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Podsumowanie</title>
+</head>
+
+<body>
+
+<?php
+	$choinkizapachowe = $_POST['choinka[]'];
+	$ilekluczykow = $_POST['kluczyk'];
+	$datadostawy = $_POST['dzien'];
+	$czasdostawy = $_POST['czas'];
+	$komentarz = $_POST['komentarz'];
+	
+echo<<<END
+
+	<h2>Podumowanie zamówienia</h2>;
+	
+	<table border="1" cellpadding="10" cellspacing="0">;
+	
+	<tr>
+		<td>Choinki Zapachowe</td> <td>$choinkizapachowe</td>
+	</tr>
+	<tr>
+		<td>Kluczyki</td> <td>$ilekluczykow</td>
+	</tr>
+	<tr>
+		<td>Data dostawy</td> <td>$datadostawy</td>
+	</tr>
+	<tr>
+		<td>Czas dostawy</td> <td>$czasdostawy</td>
+	</tr>
+	<tr>
+		<td>Komentarz</td> <td>$komentarz</td>
+	</tr>
+	
+	</table>
+END;
+?>
+
+</body>
+</html>

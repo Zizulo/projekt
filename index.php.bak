@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Wypożyczalnia samochodowa</title>
+	<meta name="description" content="Wypożycz swój wymarzony model samochodu!">
+	<meta name="keywords" content="samochód, katalog, salon, wypożyczalnia aut, pancar sharing studio">
+	<meta name="author" content="Cezary Figurski">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<script src="timer.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script src="jquery.scrollTo.min.js"></script>
+	
+	<script>
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			$('#link1').click(function() {$.scrollTo($('#rodzajnadwozia'), 500);});
+			$('#link2').click(function() {$.scrollTo($('#katalog'), 500);});
+			$('#link3').click(function() {$.scrollTo($('#rodzajsilnika'), 500);});
+			$('#link4').click(function() {$.scrollTo($('#wyposazeniesamochodu'), 500);});
+			$('#link5').click(function() {$.scrollTo($('#choinkizapachowe'), 500);});
+			$('#link6').click(function() {$.scrollTo($('#ilekluczykow'), 500);});
+			$('#link7').click(function() {$.scrollTo($('#datadostawy'), 500);});
+			$('#link8').click(function() {$.scrollTo($('#czasdostawy'), 500);});
+			$('#link9').click(function() {$.scrollTo($('#uwagi'), 500);});
+			$('.scrollup').click(function() {$.scrollTo($('body'), 1000);});
+		}
+		);
+		
+		//pokaz podczas przewijania
+		
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();
+		}
+		);
+	</script>
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body onload="odliczanie();">
+
+	<header>
+		<div class="rectangle">
+			<div id="logo" ><a href="wypożyczalnia-aut" class="logolink" alt="wypożyczalnia-aut">Wybierz konfigurację samochodu</a></div>
+			<div id="miejscelogo" ><img src="img/logo.png" alt="logo"></div>
+			<div id="zegar" >12:00:00</div>
+			<div style="clear: both;"></div>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="#"><label> Rodzaj nadwozia </label></a></li>
+				<li><a href="#"><label> .... </label></a></li>
+				<li><a href="#"><label> O nas </label></a></li>
+				<li><a href="#"><label> Kontakt </label></a></li>
+				<li><label> Szukaj <input type="search" name="fraza"></label></div>
+			<div style="clear: both;"></div>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+	
+		<article>
+			
+				<div id="container" class="container">
+				
+					<a href="#" class="scrollup"></a>
+			
+					<nav>	
+						<div id="naw" class="naw">
+							<ol>
+								<li><a id="link1" href="#"><div class="naw1"><label>Rodzaj nadwozia</label></div></a></li>
+								<li><a id="link2" href="#"><div class="naw1"><label>Katalog</label></div></a></li>
+								<li><a id="link3" href="#"><div class="naw1"><label>Rodzaj silnika</label></div></a></li>
+								<li><a id="link4" href="#"><div class="naw1"><label>Wyposażenie samochodu</label></div></a></li>
+								<li><a id="link5" href="#"><div class="naw1"><label>Choinki zapachowe</label></div></a></li>
+								<li><a id="link6" href="#"><div class="naw1"><label>Kluczyki do samochodu</label></div></a></li>
+								<li><a id="link7" href="#"><div class="naw1"><label>Data dostawy</label></div></a></li>
+								<li><a id="link8" href="#"><div class="naw1"><label>Preferowany czas dostawy</label></div></a></li>
+								<li><a id="link9" href="#"><div class="naw1"><label>Uwagi do zamówienia</label></div></a></li>
+							</ol>
+						</div>
+					</nav>	
+					
+			<form action="order.php" method="post">	
+			
+					<div id="content" class="content">
+					
+						<div id="rodzajnadwozia" class="square">
+							<fieldset>
+								<legend>1. Rodzaj nadwozia</legend>
+								
+								<div><label><input type="radio" value="1" name="nadwozie" checked> SUV </label></div>
+								<div><label><input type="radio" value="2" name="nadwozie"> CUV </label></div>
+								<div><label><input type="radio" value="3" name="nadwozie"> Sedan </label></div>
+								<div><label><input type="radio" value="4" name="nadwozie"> Hatchback </label></div>
+								<div><label><input type="radio" value="5" name="nadwozie"> Cabriolet </label></div>
+								<div><label><input type="radio" value="6" name="nadwozie"> Coupe </label></div>
+								
+							</fieldset>
+						</div>
+						<div id="katalog" class="square">
+						
+							<fieldset>
+								<legend>2. Katalog</legend>
+								<div class="tile"><a href="C:/xampp/htdocs/strona_and_wizytowka/sedan.html" target="_blank" title="Marki sedanów w naszej ofercie"><img src="img/AudiA6.jpg" width="90" height="50" alt="Sedan"></a></div>
+								<div class="tile">1</div>
+								<div class="tile">1</div>
+								
+								<div style="clear: both;"></div>
+								
+								<div class="tile">1</div>
+								<div class="tile">1</div>
+								<div class="tile">1</div>
+								
+								<div style="clear: both;"></div>
+								
+								<div class="tile">1</div>
+								<div class="tile">1</div>
+								<div class="tile">1</div>
+								
+								<div style="clear: both;"></div>
+							</fieldset>
+							
+						</div>
+						
+						<div style="clear: both"></div>
+						
+						<div id="rodzajsilnika" class="square2">
+							<fieldset>
+								<legend><label for="silnik">3. Rodzaj silnika</label></legend>
+								<select id="silnik" name="silnik">
+								
+									<option value="w">wysokoprężny(DIESEL)</option>
+									<option value="b" selected>benzynowy</option>
+									<option value="e" >elektryczny</option>
+									<option value="h" >hybrydowy</option>
+									
+								</select>
+							</fieldset>
+						
+							<fieldset>
+								<legend><div id="wyposazeniesamochodu">4. Wyposażenie samochodu</div></legend>
+								
+								<div class="col">
+									<div><label><input type="checkbox" name="wyp[]" value="1" disabled checked> klimatyzacja </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="2" disabled checked> systemy: ESP i ABS </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="3"> tapicerka skórzana </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="4"> tempomat </div></label>
+								</div>
+								<div class="col">
+									<div><label><input type="checkbox" name="wyp[]" value="5"> tylny spojler dachowy </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="6"> radio z bluetooth </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="7"> reflektory przeciwmgłowe </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="8"> przyciemniane tylne szyby </div></label>
+								</div>
+								<div class="col">
+									<div><label><input type="checkbox" name="wyp[]" value="9"> czujniki parkowania </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="10"> podgrzewane fotele </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="11"> składane lusterka </div></label>
+									<div><label><input type="checkbox" name="wyp[]" value="12"> światła LED do jazdy dziennej </div></label>
+								
+							</fieldset>
+						
+						
+							<fieldset>
+								<legend><div id="choinkizapachowe"><label for="choinka">5. Choinki zapachowe</label></div></legend>
+								
+								<select id="choinka" name="choinka[]" multiple size="4">
+									<option value="k">kokosowa</option>
+									<option value="c" selected>cytrynowa</option>
+									<option value="t" >truskawkowa</option>
+									<option value="b" >brzoskwiniowa</option>
+									<option value="m" >mięta</option>
+									<option value="p" >porzeczka</option>
+								</select> <br />
+							
+							</fieldset> 
+							<fieldset>
+								<legend><div id="ilekluczykow"><label>6. Ile kluczyków</label></div></legend>
+								<input type="number" name="kluczyk" step="1" max="2" min="0">
+							</fieldset>
+							<fieldset>
+								<legend><div id="datadostawy"><label>7. Data dostawy</label></div></legend>
+								<input type="date" name="dzien">
+							</fieldset>
+							<fieldset>
+								<legend><div id="czasdostawy"><label>8. Preferowany czas dostawy</label></div></legend>
+								<input type="time" name="czas" min="7:00" max="18:00">
+							</fieldset>
+							<fieldset>
+								<legend><div id="uwagi" name="komentarz"><label for="komentarz">9. Uwagi do zamówienia</label></div></legend>
+								<textarea name="komentarz" id="komentarz" rows="4" cols="70" maxlength="25"></textarea>
+							</fieldset>
+						</div>
+						<div style="clear: both;"></div>
+							
+						
+						
+							<input type="submit" value="Zamawiam">
+							<input type="reset" value="Wyczyść formularz">
+						
+					</div>
+			</form>
+								
+					<aside>
+						<div class="ad">
+								<a href="https://coin-birds.com/?en=Ziczko" target="_blank">
+									<img src="https://coin-birds.com/images/promo/en/160x600.gif" alt="Profit every 10 minutes!">
+								</a>
+						</div>
+					</aside>
+					
+					<footer>			
+								<div>
+									Najlepsze auta tylko u nas ! &copy; Wszelkie prawa zastrzeżone    
+								</div>
+								
+								<ul class="footer1">
+									<li><i class="icon-direction">Radom ul.Czerwca 53</i></li>
+									<li><i class="icon-phone">48 76 453 43</i></li>
+									<li><i class="icon-mail-alt">pancarsharingstudio@gmail.com</i></li>
+								</ul>
+					</footer>			
+				</div>		
+			
+		</article>
+		
+	</main>
+
+</body>
+</html>
